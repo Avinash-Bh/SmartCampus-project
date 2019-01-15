@@ -35,7 +35,7 @@ with firebase.FirebaseApplication('website address') as firebase: #Insert the da
 					data = conn.recv(1024)       #Temporarily store the recived data in binary form
 					nquote = pickle.loads(data)  #Store the data in object after extracting
 					quote = nquote.quote         #Create new separate variables to hold
-					speaker = nquote,speaker     #quote and speaker individually
+					speaker = nquote.speaker     #quote and speaker individually
 					global firebase
 					global parent_count
 					upd_result = firebase.put('quotes',parent_count,{quote:speaker})
